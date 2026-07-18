@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,15 +14,57 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="T9X-5h-JXh">
+                                <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jD-oY-dAG">
+                                <rect key="frame" x="55" y="458.33333333333331" width="330" height="95.333333333333314"/>
+                                <color key="backgroundColor" name="mainColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Welcome to our App"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="N0b-Nz-4GZ">
+                                <rect key="frame" x="145" y="224" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0rk-6P-N8R"/>
+                                    <constraint firstAttribute="height" constant="150" id="iIR-qv-ZX8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T9X-5h-JXh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="6xf-es-Zf5"/>
+                            <constraint firstItem="0jD-oY-dAG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="97g-CF-1pw"/>
+                            <constraint firstItem="N0b-Nz-4GZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QRD-Z6-VEa"/>
+                            <constraint firstItem="0jD-oY-dAG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="R54-Y8-dMG"/>
+                            <constraint firstItem="N0b-Nz-4GZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="RdD-HS-Ytf"/>
+                            <constraint firstAttribute="width" secondItem="0jD-oY-dAG" secondAttribute="width" multiplier="1:0.75" id="USC-HP-zXF"/>
+                            <constraint firstItem="0jD-oY-dAG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="N0b-Nz-4GZ" secondAttribute="bottom" constant="10" id="XKE-Dd-6aS"/>
+                            <constraint firstAttribute="bottom" secondItem="T9X-5h-JXh" secondAttribute="bottom" id="hj6-7I-TxJ"/>
+                            <constraint firstAttribute="trailing" secondItem="T9X-5h-JXh" secondAttribute="trailing" id="kyI-AB-zMQ"/>
+                            <constraint firstItem="0jD-oY-dAG" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="1:10" id="nRY-g3-AiL"/>
+                            <constraint firstItem="T9X-5h-JXh" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="x1J-lU-CAb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="214.92537313432834" y="59.725400457665899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="125" height="122.66666412353516"/>
+        <image name="logo" width="226" height="276"/>
+        <namedColor name="mainColor">
+            <color red="0.99607843137254903" green="0.77254901960784317" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
